@@ -7,8 +7,8 @@ class Cleric {
   int mp;
   String name;
 
-  Cleric({
-    required this.name,
+  Cleric(
+    this.name, {
     this.hp = maxHp,
     this.mp = maxMp,
   }) {
@@ -49,7 +49,7 @@ class Cleric {
 }
 
 void main() {
-  Cleric cleric = Cleric(name: "gmin", hp: 20, mp: 30);
+  Cleric cleric = Cleric("gmin", hp: 20, mp: 30);
   print(Cleric.maxHp);
   print(cleric.name);
   print(cleric.hp);
