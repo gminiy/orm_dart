@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Cleric {
   final int maxHp = 50;
   final int maxMp = 10;
@@ -15,6 +17,23 @@ class Cleric {
     mp -= 5;
     hp = maxHp;
   }
+
+  int pray(int sec) {
+    if (sec == 0) {
+      return 0;
+    }
+    int recoveryMp = sec + Random().nextInt(3);
+    mp += recoveryMp;
+
+    if (mp > maxMp) {
+      recoveryMp = maxMp - mp;
+      mp = maxMp;
+
+      return recoveryMp;
+    }
+
+    return recoveryMp;
+  }
 }
 
 void main() {
@@ -22,5 +41,9 @@ void main() {
   cleric.hp = 10;
   cleric.selfAid();
   print(cleric.hp);
+  print(cleric.mp);
+
+  cleric.mp = 0;
+  cleric.pray(3);
   print(cleric.mp);
 }
