@@ -11,7 +11,15 @@ class Cleric {
     required this.name,
     this.hp = maxHp,
     this.mp = maxMp,
-  });
+  }) {
+    if (hp > maxHp) {
+      hp = maxHp;
+    }
+
+    if (mp > maxMp) {
+      mp = maxMp;
+    }
+  }
 
   void selfAid() {
     if (mp < 5) {
@@ -41,13 +49,14 @@ class Cleric {
 }
 
 void main() {
-  Cleric cleric = Cleric(name: "gmin");
-  cleric.hp = 10;
-  cleric.selfAid();
+  Cleric cleric = Cleric(name: "gmin", hp: 20, mp: 30);
+  print(Cleric.maxHp);
+  print(cleric.name);
   print(cleric.hp);
   print(cleric.mp);
-
-  cleric.mp = 0;
-  cleric.pray(3);
-  print(cleric.mp);
+  // cleric.hp = 10;
+  // cleric.selfAid();
+  // cleric.mp = 0;
+  // cleric.pray(3);
+  // print(cleric.mp);
 }
