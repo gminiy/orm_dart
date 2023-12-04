@@ -48,7 +48,7 @@ class Wizard {
     required int mp,
     required Wand wand,
   })  : _name = name,
-        _hp = hp = hp < 0 ? 0 : hp,
+        _hp = hp < 0 ? 0 : hp,
         _mp = mp,
         _wand = wand,
         assert(checkName(name), 'wizard 이름은 3 글자 이상이어야 합니다.'),
@@ -95,7 +95,7 @@ class Wizard {
 void main() {
   Wand wand = Wand(name: 'myWand', power: 0.7);
   print('wand name: ${wand.name}, wand power: ${wand.power}');
-  Wizard wizard = Wizard(name: 'gmin', hp: 10, mp: 1, wand: wand);
+  Wizard wizard = Wizard(name: 'gmin', hp: -1, mp: 1, wand: wand);
   print(
       'wizard name: ${wizard.name}, wizard hp: ${wizard.hp}, wizard mp: ${wizard.mp}, wand name: ${wizard.wand.name}, wand power: ${wizard.wand.power}');
   print("changing wizard's wand power...");
