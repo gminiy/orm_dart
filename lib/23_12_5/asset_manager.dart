@@ -1,12 +1,18 @@
-abstract class TangibleAsset {
+abstract class Asset {
   String name;
   int price;
+
+  Asset({
+    required this.name,
+    required this.price,
+  });
+}
+
+abstract class TangibleAsset  extends Asset {
   String color;
 
   TangibleAsset({
-    required this.name,
-    required this.price,
-    required this.color,
+    required this.color, required super.name, required super.price,
   });
 }
 
