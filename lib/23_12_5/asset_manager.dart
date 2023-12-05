@@ -1,3 +1,8 @@
+abstract interface class Thing {
+  double getWeight();
+  double setWeight();
+}
+
 abstract class Asset {
   String name;
   int price;
