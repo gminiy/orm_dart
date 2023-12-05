@@ -1,27 +1,28 @@
-class Book {
+abstract class TangibleAsset {
   String name;
   int price;
   String color;
+
+  TangibleAsset({
+    required this.name,
+    required this.price,
+    required this.color,
+  });
+}
+
+class Book extends TangibleAsset {
   String isbn;
 
   Book({
-    required this.name,
-    required this.price,
-    required this.color,
-    required this.isbn,
+    required this.isbn, required super.name, required super.price, required super.color,
   });
 }
 
-class Computer {
-  String name;
-  int price;
-  String color;
+class Computer  extends TangibleAsset {
   String makerName;
 
   Computer({
-    required this.name,
-    required this.price,
-    required this.color,
-    required this.makerName,
+    required this.makerName, required super.name, required super.price, required super.color,
   });
 }
+
