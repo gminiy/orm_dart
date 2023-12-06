@@ -49,4 +49,16 @@ void main() {
 
   y1.a(); //'Aa' 출력
   y2.a(); //'Ba' 출력
+
+  // 연습문제 13-3
+  Y ya = A();
+  Y yb = B();
+
+  List<Y> yList =[];
+  yList.add(ya);
+  yList.add(yb);
+
+  for (final elem in yList) {
+    elem.b();
+  }
 }
