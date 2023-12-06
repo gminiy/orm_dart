@@ -1,4 +1,4 @@
-bstract class Race {
+abstract class Race {
     String name
     int hp
 }
