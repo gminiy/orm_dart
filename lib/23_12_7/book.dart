@@ -9,7 +9,7 @@ class Book {
     required this.comment,
   });
 
-// 제목과 출간일이 같으면 같은 책으로 판단한다. 또한 List, Set, Map 등의 컬렉션에 넣어도 동일 객체로 판단한다.
+  // 제목과 출간일이 같으면 같은 책으로 판단한다. 또한 List, Set, Map 등의 컬렉션에 넣어도 동일 객체로 판단한다.
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
