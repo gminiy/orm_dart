@@ -15,12 +15,13 @@ class Book {
     return identical(this, other) ||
         other is Book &&
             runtimeType == other.runtimeType &&
-            publishDate == other.publishDate;
+            publishDate == other.publishDate &&
+            title == other.title;
   }
 
   // hashCode도 함께 오버라이드
   @override
-  int get hashCode => publishDate.hashCode;
+  int get hashCode => publishDate.hashCode ^ title.hashCode;
 
   // deep copy 를 지원한다
   Book copyWith({
@@ -51,7 +52,7 @@ void main() {
     comment: 'comment1',
   );
   final Book book2 = Book(
-    title: 'title1-1',
+    title: 'title1',
     publishDate: now,
     comment: 'comment1-1',
   );
