@@ -3,7 +3,7 @@ class Word {
   List<String> vowels = ['a', 'e', 'i', 'o', 'u'];
 
   bool isVowel(int i) {
-    final String selectedChar =word.substring(i, i + 1);
+    final String selectedChar = word.substring(i, i + 1);
     print(selectedChar);
 
     return vowels.contains(selectedChar.toLowerCase());
