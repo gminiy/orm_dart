@@ -46,7 +46,7 @@ void main() {
   KeyType fingerKey = KeyType.finger;
 
   Treasure treasure = Treasure();
-  StrongBox strongBox = StrongBox(key: padlockKey, instance: treasure);
+  StrongBox<Treasure> strongBox = StrongBox(key: padlockKey, instance: treasure);
   strongBox.put(treasure);
 
   // 다른 타입 키 사용
