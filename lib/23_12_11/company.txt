@@ -1,0 +1,5 @@
+Leader:
+{"name":"연지민","age":41}
+
+Department:
+{"name":"개발팀","leader":{"name":"연지민","age":41},"employees":[{"name":"똘마니1","age":43},{"name":"똘마니2","age":42}]}
