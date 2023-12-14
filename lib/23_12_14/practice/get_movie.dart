@@ -1,5 +1,5 @@
-import 'package:orm_dart/23_12_14/practice/model/moive_detail.dart';
-import 'package:orm_dart/23_12_14/practice/model/movie_response.dart';
+import 'package:orm_dart/23_12_14/practice/model/movie/movie_detail.dart';
+import 'package:orm_dart/23_12_14/practice/model/movie/movie_response.dart';
 import 'package:orm_dart/23_12_14/practice/movie_client.dart';
 
 void main() async {

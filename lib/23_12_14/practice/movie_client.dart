@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:orm_dart/23_12_14/practice/model/moive_detail.dart';
-import './model/movie_response.dart';
+import 'package:orm_dart/23_12_14/practice/model/movie/movie_detail.dart';
+import './model/movie/movie_response.dart';
 
 class MovieClient {
   final String _baseUrl = 'https://api.themoviedb.org/3/movie';
